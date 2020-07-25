@@ -1,24 +1,26 @@
-<h1>
-  <%= @task.title %>
-</h1>
+<div>
+  <h1>
+    <%= @task.title %>
+  </h1>
 
-<p>Description:
-  <i>
-    <%= @task.details %>
-  </i>
-</p>
-<p>Task completed:
-  <i>
-    <% if @task.completed == true %>
-    <input type="checkbox" checked disabled>
-    <% else %>
-    <input type="checkbox" disabled>
-    <% end %>
-  </i>
-</p>
-<%= link_to 'Update task', edit_path %>
+  <p>Description:
+    <i>
+      <%= @task.details %>
+    </i>
+  </p>
+  <p>TASK COMPLETION:
+    <i>
+      <% if @task.completed == true %>
+      <input type="checkbox" checked disabled>
+      <% else %>
+      <input type="checkbox" disabled>
+      <% end %>
+    </i>
+  </p>
+<%= link_to 'Update task', edit_path %> |
 
-<%= link_to 'Back to all tasks', tasks_path %>
+<%= link_to 'Back to all tasks', tasks_path %> |
 
 <%= link_to 'Delete', delete_path(@task), method: :delete %>
+</div>
 
